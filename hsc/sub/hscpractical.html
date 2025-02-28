@@ -99,5 +99,27 @@
    
   </div>
 
+
+  <p>This page has been viewed <span id="view-count">0</span> times.</p>
+
+  <script>
+    // Check if the view count exists in localStorage
+    let viewCount = localStorage.getItem('viewCount');
+
+    // If it doesn't exist, initialize it to 0
+    if (!viewCount) {
+      viewCount = 0;
+    }
+
+    // Increment the view count
+    viewCount++;
+
+    // Update the view count in localStorage
+    localStorage.setItem('viewCount', viewCount);
+
+    // Display the updated view count on the page
+    document.getElementById('view-count').textContent = viewCount;
+  </script>
+
 </body>
 </html>
